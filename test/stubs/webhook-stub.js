@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-export default function createWebhookStub(sendWebhookMessage) {
+module.exports = function createWebhookStub(sendWebhookMessage) {
   return class WebhookStub {
     constructor(id, token) {
       this.id = id;
@@ -11,4 +11,4 @@ export default function createWebhookStub(sendWebhookMessage) {
       return new Promise(() => {});
     }
   };
-}
+};

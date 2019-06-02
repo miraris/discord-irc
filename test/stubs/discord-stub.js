@@ -1,9 +1,9 @@
 /* eslint-disable class-methods-use-this */
-import events from 'events';
-import sinon from 'sinon';
-import discord from 'discord.js';
+const events = require('events');
+const sinon = require('sinon');
+const discord = require('discord.js');
 
-export default function createDiscordStub(sendStub, discordUsers) {
+function createDiscordStub(sendStub, discordUsers) {
   return class DiscordStub extends events.EventEmitter {
     constructor() {
       super();
@@ -24,9 +24,12 @@ export default function createDiscordStub(sendStub, discordUsers) {
     }
 
     addTextChannel(guild, textChannel) {
-      const textChannelData = Object.assign({
-        type: 'text'
-      }, textChannel);
+      const textChannelData = Object.assign(
+        {
+          type: 'text'
+        },
+        textChannel
+      );
       const textChannelObj = new discord.TextChannel(guild, textChannelData);
       textChannelObj.send = sendStub;
       this.channels.set(textChannelObj.id, textChannelObj);
@@ -53,7 +56,7 @@ export default function createDiscordStub(sendStub, discordUsers) {
       if (guild.id === '1') {
         guild.addTextChannel({
           name: 'discord',
-          id: '1234',
+          id: '1234'
         });
       }
 
@@ -65,3 +68,5 @@ export default function createDiscordStub(sendStub, discordUsers) {
     }
   };
 }
+
+module.exports = createDiscordStub;

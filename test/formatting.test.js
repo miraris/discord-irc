@@ -1,7 +1,7 @@
 /* eslint-disable prefer-arrow-callback */
 
-import chai from 'chai';
-import { formatFromDiscordToIRC, formatFromIRCToDiscord } from '../lib/formatting';
+const chai = require('chai');
+const { formatFromDiscordToIRC, formatFromIRCToDiscord } = require('../lib/formatting');
 
 chai.should();
 

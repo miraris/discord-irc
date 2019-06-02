@@ -1,5 +1,5 @@
-import chai from 'chai';
-import { ConfigurationError } from '../lib/errors';
+const chai = require('chai');
+const { ConfigurationError } = require('../lib/errors');
 
 chai.should();
 

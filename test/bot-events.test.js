@@ -1,20 +1,20 @@
 /* eslint-disable no-unused-expressions, prefer-arrow-callback */
-import chai from 'chai';
-import sinonChai from 'sinon-chai';
-import sinon from 'sinon';
-import irc from 'irc-upd';
-import discord from 'discord.js';
-import Bot from '../lib/bot';
-import logger from '../lib/logger';
-import createDiscordStub from './stubs/discord-stub';
-import ClientStub from './stubs/irc-client-stub';
-import config from './fixtures/single-test-config.json';
+const chai = require('chai');
+const sinonChai = require('sinon-chai');
+const sinon = require('sinon');
+const irc = require('irc-upd');
+const discord = require('discord.js');
+const Bot = require('../lib/bot');
+const logger = require('../lib/logger');
+const createDiscordStub = require('./stubs/discord-stub');
+const ClientStub = require('./stubs/irc-client-stub');
+const config = require('./fixtures/single-test-config.json');
 
 chai.should();
 chai.use(sinonChai);
 
 describe('Bot Events', function () {
-  const sandbox = sinon.sandbox.create({
+  const sandbox = sinon.createSandbox({
     useFakeTimers: false,
     useFakeServer: false
   });

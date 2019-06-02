@@ -32,8 +32,8 @@ $ npm start -- --config /path/to/config.json # Note the extra double dash
 
 It can also be used as a module:
 ```js
-import discordIRC from 'discord-irc';
-import config from './config.json';
+const discordIRC = require('discord-irc');
+const config = require('./config.json');
 discordIRC(config);
 ```
 

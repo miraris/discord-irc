@@ -1,4 +1,4 @@
-import events from 'events';
+const events = require('events');
 
 class ClientStub extends events.EventEmitter {
   constructor(...args) {
@@ -7,4 +7,4 @@ class ClientStub extends events.EventEmitter {
   }
 }
 
-export default ClientStub;
+module.exports = ClientStub;

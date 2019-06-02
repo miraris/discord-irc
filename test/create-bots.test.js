@@ -1,20 +1,20 @@
 /* eslint-disable no-unused-expressions, prefer-arrow-callback */
-import chai from 'chai';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-import Bot from '../lib/bot';
-import index from '../lib/index';
-import testConfig from './fixtures/test-config.json';
-import singleTestConfig from './fixtures/single-test-config.json';
-import badConfig from './fixtures/bad-config.json';
-import stringConfig from './fixtures/string-config.json';
-import { createBots } from '../lib/helpers';
+const chai = require('chai');
+const sinon = require('sinon');
+const sinonChai = require('sinon-chai');
+const Bot = require('../lib/bot');
+const index = require('../lib/index');
+const testConfig = require('./fixtures/test-config.json');
+const singleTestConfig = require('./fixtures/single-test-config.json');
+const badConfig = require('./fixtures/bad-config.json');
+const stringConfig = require('./fixtures/string-config.json');
+const { createBots } = require('../lib/helpers');
 
 chai.should();
 chai.use(sinonChai);
 
 describe('Create Bots', function () {
-  const sandbox = sinon.sandbox.create({
+  const sandbox = sinon.createSandbox({
     useFakeTimers: false,
     useFakeServer: false
   });

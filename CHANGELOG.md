@@ -1,6 +1,15 @@
 # Changelog
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.8.0] - 2019-06-03
+### Added
+* `ircPreventMention` config option, by [webvictim](https://github.com/webvictim)
+
+### Changed
+* Remove babel, use CommonJS modules.
+* Update all dependencies.
+* Remove `check-env`, just throw an exception.
+
 ## [2.7.0] - 2019-04-02
 ### Changed
 * Convert channel mentions to codified mentions (thanks to [Throne3d](https://github.com/reactiflux/discord-irc/pull/476)).

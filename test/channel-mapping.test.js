@@ -1,12 +1,12 @@
-import chai from 'chai';
-import irc from 'irc-upd';
-import discord from 'discord.js';
-import Bot from '../lib/bot';
-import config from './fixtures/single-test-config.json';
-import caseConfig from './fixtures/case-sensitivity-config.json';
-import DiscordStub from './stubs/discord-stub';
-import ClientStub from './stubs/irc-client-stub';
-import { validateChannelMapping } from '../lib/validators';
+const chai = require('chai');
+const irc = require('irc-upd');
+const discord = require('discord.js');
+const Bot = require('../lib/bot');
+const config = require('./fixtures/single-test-config.json');
+const caseConfig = require('./fixtures/case-sensitivity-config.json');
+const DiscordStub = require('./stubs/discord-stub');
+const ClientStub = require('./stubs/irc-client-stub');
+const { validateChannelMapping } = require('../lib/validators');
 
 chai.should();
 

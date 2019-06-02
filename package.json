@@ -29,7 +29,7 @@
     "test": "yarn run lint && mocha"
   },
   "author": {
-    "name": "miraris"
+    "name": "reactiflux"
   },
   "license": "MIT",
   "dependencies": {

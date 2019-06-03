@@ -99,7 +99,8 @@ First you need to create a Discord bot user, which you can do by following the i
     // List of webhooks per channel
     "webhooks": {
       "#discord": "https://discordapp.com/api/webhooks/id/token"
-    }
+    },
+    "webhookDisableEveryone": false // disable @everyone when bridging using webhooks, enabled by default
   }
 ]
 ```

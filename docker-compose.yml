@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  bridge:
+    image: miraris/discord-irc
+    configs:
+      - source: bot_config
+        target: /usr/src/app/config.json
+configs:
+  bot_config:
+    external: true
